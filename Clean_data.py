@@ -124,4 +124,4 @@ def process_repeat(train_file_path,val_file_path):
 
 
 if __name__=="__main__":
-    process_repeat("../data/train_clean/","../data/val_clean/")
+    process_repeat("data/AgriculturalDisease_trainingset","data/AgriculturalDisease_validationset")

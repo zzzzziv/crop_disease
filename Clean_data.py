@@ -92,7 +92,7 @@ def dereplicate(train_file_path):
     """
     # 训练数据处理
     train_name_list,train_path_dict=load_files(train_file_path)
-    print("train img nums:{},path nume:{}".format(len(train_name_list),len(train_path_dict)))
+    print("train_data img nums:{},path nume:{}".format(len(train_name_list),len(train_path_dict)))
     train_name_list=derepeat(train_name_list)
     # print("num:{}".format(len(train_name_list)))
     train_path_dict,train_name_list=remove_file(train_name_list,train_path_dict)

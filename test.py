@@ -14,7 +14,7 @@ def mkdir(path):
     # print("---  There is this folder!  ---")
 
 
-source_dir = './images/'
+source_dir = 'data/AgriculturalDisease_trainingset'
 img = os.listdir(source_dir)  # 得到文件夹下所有文件名称
 
 with open("AgriculturalDisease_train_annotations.json", 'r') as load_f:
@@ -22,8 +22,8 @@ with open("AgriculturalDisease_train_annotations.json", 'r') as load_f:
     # print(load_dict)
 
 for pop_dict in load_dict:
-    path = "./class/" + str(pop_dict['disease_class'])
-    mkdir("./class/" + str(pop_dict['disease_class']))  # 根据类别创建文件夹
+    path = "./train_data/" + str(pop_dict['disease_class'])
+    mkdir("./train_data/" + str(pop_dict['disease_class']))  # 根据类别创建文件夹
     # print(path)
     for fileNum in img:
         if not os.path.isdir(fileNum):  # 判断是否是文件夹,不是文件夹才打开
